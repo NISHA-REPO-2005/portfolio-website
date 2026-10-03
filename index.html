@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="seo-title">Alex Ramirez — Full Stack Developer & AI Engineer</title>
+  <meta name="description" id="seo-description" content="Luxury editorial portfolio of Alex Ramirez — Full Stack Developer crafting intelligent software, AI integrations, and elevated digital experiences.">
+  <meta name="theme-color" content="#1c1014">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Pinyon+Script&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+  <!-- GSAP for Cinematic Page & Route Transitions -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- ═══════════ AMBIENT GLOWS & GRAIN OVERLAY ═══════════ -->
+  <div class="ambient-glow ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-mid" aria-hidden="true"></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════ PRELOADER (Runs on Initial Portfolio Entry) ═══════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-text" id="preloader-name">
+        <span>A</span><span>L</span><span>E</span><span>X</span>
+        <span>&nbsp;</span>
+        <span>R</span><span>A</span><span>M</span><span>I</span><span>R</span><span>E</span><span>Z</span>
+      </div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill" id="preloader-fill"></div>
+      </div>
+      <div class="preloader-counter" id="preloader-counter">0%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ CUSTOM CURSOR ═══════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- ═══════════ DYNAMIC SPA APP ROOT CONTAINER ═══════════ -->
+  <main id="app-root"></main>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

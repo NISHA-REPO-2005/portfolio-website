@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to CMS Studio...</title>
+  <script>
+    if (window.location.protocol === 'file:') {
+      window.location.replace('index.html#/admin');
+    } else {
+      window.location.replace('/admin');
+    }
+  </script>
+</head>
+<body style="background:#1c1014; color:#e6d6cc; font-family:sans-serif; display:flex; align-items:center; justify-content:center; height:100vh;">
+  <p>Redirecting to CMS Studio... <a href="/admin" style="color:#e6d6cc;">Click here if not redirected.</a></p>
+</body>
+</html>
