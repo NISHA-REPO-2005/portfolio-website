@@ -58,7 +58,7 @@ const DEFAULT_SITE_DATA = {
       image: 'assets/images/project-stockify.jpg',
       link: 'https://github.com/NISHA-REPO-2005',
     },
-    {
+{
       id: 'proj-3',
       number: '03',
       name: 'Edge-AI Border Surveillance',
