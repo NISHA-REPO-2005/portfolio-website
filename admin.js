@@ -674,10 +674,10 @@
      ========================================================= */
   function saveAllChanges() {
     // 1. Collect Personal Info
-    const fullName = getVal('f-name') || 'Alex Ramirez';
-    const roleHeadline = getVal('f-role') || 'Full Stack Developer · AI Engineer';
-    const email = getVal('f-email') || 'alex@alexramirez.dev';
-    const badge = getVal('f-badge') || 'AR';
+    const fullName = getVal('f-name') || 'Nisha Yadav';
+    const roleHeadline = getVal('f-role') || 'B.Tech CSE Student · Web Developer';
+    const email = getVal('f-email') || 'ny26.05.2005@gmail.com';
+    const badge = getVal('f-badge') || 'NY';
     const heroTitle = getVal('f-hero-title') || 'PORTFOLIO.';
     const heroSubtitle = getVal('f-hero-subtitle') || '';
     const aboutHeadline = getVal('f-about-headline') || '';

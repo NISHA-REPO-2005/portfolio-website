@@ -1,138 +1,154 @@
 /* =========================================================
-   data.js — Content Data Layer
-   Manages site content with localStorage persistence.
-   Used by both the main site and the admin CMS dashboard.
+   data.js — Content Data Layer (Interview-Safe & Honest)
    ========================================================= */
 
 const STORAGE_KEY = 'portfolio_site_data';
 
 const DEFAULT_SITE_DATA = {
- profile: {
-  name: 'Nisha Yadav',
-  firstName: 'Nisha',
-  headline: 'B.Tech CSE Student & Web Developer',
-  email: 'YOUR_EMAIL@gmail.com',
-  portraitAlt: 'Nisha Yadav — B.Tech CSE Student',
-  portraitSrc: 'assets/images/portrait.jpg',
-  badge: 'NY',
-},
- hero: {
-  eyebrow: 'B.Tech CSE Student · Web Developer',
-  titleLine1: 'PORTFOLIO.',
-  subtitle:
-    'I am Nisha Yadav, a Computer Science Engineering student passionate about web development, programming, and building useful digital experiences.',
-},
+  profile: {
+    name: 'Nisha Yadav',
+    firstName: 'Nisha',
+    headline: 'B.Tech CSE Student · Aspiring Web Developer',
+    email: 'ny26.05.2005@gmail.com',
+    portraitAlt: 'Nisha Yadav — B.Tech CSE Student',
+    portraitSrc: 'assets/images/portrait.jpg',
+    badge: 'NY',
+  },
+  hero: {
+    eyebrow: 'B.Tech CSE Student · Web Developer',
+    titleLine1: 'PORTFOLIO.',
+    subtitle:
+      'I am Nisha Yadav, a Computer Science and Engineering student at Techno Main Salt Lake, passionate about core programming fundamentals and building clean, reliable software.',
+  },
 
   about: {
-  label: 'About Me',
-  headlineHTML:
-    'I am a <em class="accent">CSE student</em><br>learning, building,<br>and growing.',
-  text1:
-    "I am a 3rd-year B.Tech Computer Science and Engineering student at Calcutta Institute of Engineering and Management. I enjoy learning programming and web development and turning what I learn into practical projects.",
-  text2:
-    'My current skills include C, Python, Java, HTML, CSS, and basic DSA. I am particularly interested in growing as a Web Developer and building meaningful projects.',
-},
+    label: 'About Me',
+    headlineHTML:
+      'I am a <em class="accent">CSE student</em><br>learning, building,<br>and growing.',
+    text1:
+      'I am a 3rd-year B.Tech Computer Science and Engineering student at Techno Main Salt Lake. I focus on translating my academic coursework into practical coding skills.',
+    text2:
+      'My technical foundation includes C, Python, Java, HTML, CSS, and basic JavaScript. I am currently strengthening my knowledge of Data Structures, Algorithms, Operating Systems, and Software Engineering principles to prepare for a career in software development.',
+  },
 
+  metrics: [],
 
-  metrics: [
-    { count: 50, suffix: '+', label: 'Projects Delivered' },
-    { count: 5, suffix: '+', label: 'Years Experience' },
-    { count: 30, suffix: '+', label: 'Happy Clients' },
+  projects: [
+    {
+      id: 'proj-1',
+      number: '01',
+      name: 'Personal Portfolio Website',
+      description:
+        'A responsive frontend portfolio designed to showcase my academic background and projects. Built from scratch using Vanilla JavaScript and modern CSS.',
+      tags: ['Frontend', 'Web Design'],
+      techStack: ['HTML', 'CSS', 'JavaScript'],
+      year: '2026',
+      image: 'assets/images/project-aurelia.jpg',
+      link: 'https://github.com/NISHA-REPO-2005/portfolio-website',
+    },
+    {
+      id: 'proj-2',
+      number: '02',
+      name: 'STOCKIFY (In Progress)',
+      description:
+        'An ongoing Java desktop application development project demonstrating core object-oriented programming concepts and local database connectivity.',
+      tags: ['Desktop App', 'Java', 'In Progress'],
+      techStack: ['Java', 'JDBC'],
+      year: '2026',
+      image: 'assets/images/project-stockify.jpg',
+      link: 'https://github.com/NISHA-REPO-2005',
+    },
+    {
+      id: 'proj-3',
+      number: '03',
+      name: 'Edge-AI Border Surveillance',
+      description:
+        'Participated as a team member in Hackathon 2026 for an edge-AI computer vision tracking system. Led and crafted the presentation deck and pitch materials.',
+      tags: ['AI/ML', 'Hackathon 2026', 'Team Project'],
+      techStack: ['Python', 'YOLOv8', 'OpenCV'],
+      year: '2026',
+      image: 'assets/images/project-ai.jpg',
+      link: '#',
+    }
   ],
 
- projects: [
-  {
-    id: 'proj-1',
-    number: '01',
-    name: 'Personal Portfolio Website',
-    description:
-      'A responsive personal portfolio website showcasing my education, skills, learning journey, and projects as a Computer Science Engineering student.',
-    tags: ['Web Development', 'Portfolio', 'Frontend'],
-    techStack: ['HTML', 'CSS', 'JavaScript'],
-    year: '2026',
-    image: 'assets/images/project-aurelia.jpg',
-    link: '#',
-  },
-],
+  services: [
+    {
+      number: '01',
+      heading: 'Web Development Basics',
+      icon: 'code',
+      text: 'Creating structural, styled, and interactive web pages.',
+      bullets: [
+        'Semantic HTML5',
+        'CSS layout techniques',
+        'Vanilla JavaScript DOM manipulation',
+      ],
+      skills: ['HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      number: '02',
+      heading: 'Core Programming',
+      icon: 'brain',
+      text: 'Writing clean, logical code based on university curriculum.',
+      bullets: [
+        'C programming fundamentals',
+        'Java object-oriented concepts',
+        'Basic Python scripting',
+      ],
+      skills: ['C', 'Java', 'Python'],
+    },
+    {
+      number: '03',
+      heading: 'CS Fundamentals',
+      icon: 'code',
+      text: 'Applying theoretical computer science concepts to problem-solving.',
+      bullets: [
+        'Basic Data Structures & Algorithms',
+        'Operating Systems concepts',
+        'Software Engineering models (DFDs, COCOMO)',
+      ],
+      skills: ['DSA', 'OS', 'Software Engineering'],
+    },
+  ],
 
- services: [
-  {
-    number: '01',
-    heading: 'Web Development',
-    icon: 'code',
-    text: 'Learning to build responsive and user-friendly websites using modern frontend technologies.',
-    bullets: [
-      'HTML & semantic web structure',
-      'CSS styling and layouts',
-      'JavaScript fundamentals',
-      'Responsive web design',
-    ],
-    skills: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    number: '02',
-    heading: 'Programming',
-    icon: 'brain',
-    text: 'Building a strong programming foundation through hands-on practice and problem solving.',
-    bullets: [
-      'C programming',
-      'Python programming',
-      'Java fundamentals',
-      'Problem solving',
-    ],
-    skills: ['C', 'Python', 'Java'],
-  },
-  {
-    number: '03',
-    heading: 'Data Structures',
-    icon: 'code',
-    text: 'Learning and practicing fundamental data structures and algorithms.',
-    bullets: [
-      'Arrays',
-      'Basic data structures',
-      'Algorithm fundamentals',
-      'Problem solving',
-    ],
-    skills: ['DSA', 'Problem Solving'],
-  },
-],
+  testimonials: [],
 
-testimonials: [],
-
-socials: [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/NISHA-REPO-2005',
-  },
-  {
-    name: 'LeetCode',
-    url: '#',
-  },
-],
+  socials: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/NISHA-REPO-2005',
+    },
+  ],
 
   footer: {
     copyright: '© 2026 Nisha Yadav. Built with passion.',
   },
 
- seo: {
-  title: 'Nisha Yadav — B.Tech CSE Student & Web Developer',
-  description:
-    'Portfolio of Nisha Yadav, a B.Tech Computer Science and Engineering student interested in web development, programming, and building practical projects.',
-},
+  seo: {
+    title: 'Nisha Yadav — B.Tech CSE Student',
+    description: 'Portfolio of Nisha Yadav, a B.Tech CSE student at Techno Main Salt Lake.',
+  },
 };
 
 /* ── Storage helpers ── */
-
 function getSiteData() {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
-      // Deep merge with defaults to ensure new fields are always present
+      if (
+        parsed.profile?.email === 'YOUR_EMAIL@gmail.com' ||
+        parsed.profile?.name === 'Alex Ramirez' ||
+        (Array.isArray(parsed.metrics) &&
+          parsed.metrics.some((m) => m.count === 50))
+      ) {
+        localStorage.removeItem(STORAGE_KEY);
+        return structuredClone(DEFAULT_SITE_DATA);
+      }
       return deepMerge(structuredClone(DEFAULT_SITE_DATA), parsed);
     }
   } catch (e) {
-    console.warn('Failed to load site data from storage:', e);
+    console.warn('Failed to load site data:', e);
   }
   return structuredClone(DEFAULT_SITE_DATA);
 }
@@ -156,7 +172,6 @@ function hasCustomData() {
   return localStorage.getItem(STORAGE_KEY) !== null;
 }
 
-/* ── Deep merge utility ── */
 function deepMerge(target, source) {
   for (const key of Object.keys(source)) {
     if (
@@ -175,7 +190,6 @@ function deepMerge(target, source) {
   return target;
 }
 
-/* ── Generate unique ID ── */
 function generateId() {
   return 'proj-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
 }
